@@ -10,9 +10,14 @@ public class Paddle extends JPanel {
 	
 	public static final int WIDTH = 20;
     public static final int HEIGHT = 80;
+    
+    private int y;
+
 	
-	public Paddle() {
+	public Paddle(int x, int y) {
 		setOpaque(false);
+		setBounds(x, y, WIDTH, HEIGHT);
+		this.y = y;
 	}
 
 	@Override
@@ -24,4 +29,19 @@ public class Paddle extends JPanel {
         g.fillRect(0, 0, WIDTH, HEIGHT);
 	}
 	
+	
+	 public void moveUp() {
+	        if (y > 0 ) {
+	            y -= 10; 
+	            setBounds(getX(), y, WIDTH, HEIGHT); 
+	        }
+	}
+	 
+	 public void moveDown() {
+		    if (y < GameWindow.SCREEN_HEIGHT - HEIGHT) {  
+		        y += 10;
+		        setBounds(getX(), y, WIDTH, HEIGHT);
+		    }
+		}
+
 }

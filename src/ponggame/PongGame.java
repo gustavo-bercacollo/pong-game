@@ -8,11 +8,6 @@ public class PongGame {
 		
 		new GameWindow();
 		System.out.println("running");
-		
-		
-		
-		
 
 	}
-
 }

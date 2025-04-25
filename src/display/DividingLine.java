@@ -20,7 +20,7 @@ public class DividingLine extends JPanel{
 	    super.paintComponent(g); 
 	    
 
-	    g.setColor(Color.WHITE);
+	    g.setColor(Color.GRAY);
 	
         int x = (getWidth()) / 2;
         int y = 8;
